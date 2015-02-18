@@ -25,6 +25,13 @@ class PostsController < ApplicationController
 
   end
 
+  def delete
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to post_index_path } 
+    end
+  end
+
   def update
     @post.update(posts_params)
     respond_to do |format|

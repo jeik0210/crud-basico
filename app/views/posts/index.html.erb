@@ -11,6 +11,7 @@
 		<td><%= p.descripcion %></td>
 		<td><%= p.fecha %></td>
 		<td><%= link_to 'editar', edit_post_path(post_id: p.id) %></td>
+		<td><%= link_to 'borrar', delete_post_path(post_id: p.id), method: :delete, data: { confirm: '¿Está seguro que desea borrar el registro?' } %></td>
 	</tr>
 	<% end %>
 </table>
