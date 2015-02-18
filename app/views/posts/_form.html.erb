@@ -1,0 +1,9 @@
+<%= form_tag(create_post_path , method: 'post') do %>
+	<%= label_tag :titulo, 'titulo'%>
+	<%= text_field :post, :titulo %> <br>
+	<%= label_tag :descripcion, 'descripcion'%>
+	<%= text_field :post, :descripcion %> <br>
+	<%= label_tag :fecha, 'fecha'%>
+	<%= text_field :post, :fecha %> <br>
+	<%= submit_tag 'enviar'%>
+<% end %>

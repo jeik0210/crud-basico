@@ -1,0 +1,17 @@
+<h1>Mis publicaciones</h1>
+	<table border="1" >
+		<tr>
+			<td>titulo</td>
+			<td>descripcion</td>
+			<td>fecha</td>
+		</tr>
+		<% @post.each do |f| %>
+		<tr>
+			<td><%= f.titulo %></td>
+			<td><%= f.descripcion %></td>
+			<td><%= f.fecha %></td>
+			<td><%= link_to 'editar', update_post_path %></td>
+		</tr>
+		<% end %>
+	</table>
+<%= link_to 'crear nuevo post' , new_post_path %>
