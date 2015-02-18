@@ -1,15 +1,13 @@
-<% path = create_post_path if @post.nil? %>
-<% path = update_post_path unless @post.nil? %>
-<%= form_tag(path , method: 'post') do %>
-	<%= hidden_field_tag :post_id, @post.id unless @post.nil? %>
+<%= form_tag(@path , method: 'post') do %>
+	<%= hidden_field_tag :post_id, @post.id %>
 	<%= label_tag :titulo, 'titulo'%>
-	<%= text_field :post, :titulo, value: @post.titulo unless @post.nil? %>
-	<%= text_field :post, :titulo if @post.nil? %> <br>
+	<%= text_field :post, :titulo, value: @post.titulo %>
+	<br>
 	<%= label_tag :descripcion, 'descripcion'%>
-	<%= text_field :post, :descripcion , value: @post.descripcion unless @post.nil? %>
-	<%= text_field :post, :descripcion if @post.nil? %> <br>
+	<%= text_field :post, :descripcion , value: @post.descripcion %>
+	<br>
 	<%= label_tag :fecha, 'fecha'%>
-	<%= text_field :post, :fecha, value: @post.fecha unless @post.nil? %>
-	<%= text_field :post, :fecha if @post.nil? %> <br>
+	<%= text_field :post, :fecha, value: @post.fecha %>
+	<br>
 	<%= submit_tag 'enviar'%>
 <% end %>

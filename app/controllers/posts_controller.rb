@@ -6,11 +6,12 @@ class PostsController < ApplicationController
   end
 
   def new
-  	@posts = Post.new 
+  	@post = Post.new
+    @path = create_post_path
   end
 
   def edit
-    
+    @path = update_post_path
   end
 
   def create
