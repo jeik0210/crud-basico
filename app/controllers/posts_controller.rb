@@ -8,10 +8,12 @@ class PostsController < ApplicationController
   def new
   	@post = Post.new
     @path = create_post_path
+    @method = :post
   end
 
   def edit
     @path = update_post_path
+    @method = :put
   end
 
   def create
