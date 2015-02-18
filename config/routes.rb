@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   root 'posts#index'
   get 'articulos' => 'posts#index', as: :post_index
   get 'nuevo/post' => 'posts#new', as: :new_post
-  get 'post/show' => 'posts#show', as: :show_post
+  get 'post/show/:post_id' => 'posts#show', as: :show_post
+  get 'post/edit/:post_id' => 'posts#edit', as: :edit_post
   post 'crear' => 'posts#create', as: :create_post 
-  get 'update' => 'posts#update', as: :update_post
-  get 'edit'=> 'posts#edit', as: :edit_post
+  post 'update' => 'posts#update', as: :update_post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
